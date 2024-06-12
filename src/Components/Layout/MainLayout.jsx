@@ -5,11 +5,13 @@ import Header from "../Shared/Header";
 
 const MainLayout = () => {
     return (
-        <div>
-            <Header/>
-            <Outlet/>
+        <>
+           <div className="px-20">
+           <Header/>
+           <Outlet/>
+           </div>
             <Footer/>
-        </div>
+        </>
     );
 };
 
