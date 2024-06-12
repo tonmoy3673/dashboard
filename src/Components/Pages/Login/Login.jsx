@@ -141,7 +141,7 @@ const Login = () => {
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p className='py-2'>New to book-berry? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
+                <p className='py-2'>New to BookShop? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
                 <div className="divider text-xl font-semibold">OR</div>
                 <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
                 <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>

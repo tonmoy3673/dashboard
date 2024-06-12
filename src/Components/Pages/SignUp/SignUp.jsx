@@ -72,13 +72,13 @@ const Signup = () => {
     
 
     return (
-        <div className='h-[800px] flex justify-center items-center'>
-            <div className='w-96 p-10 bg-[#00a8ff] rounded'>
+        <div className='h-[800px] flex justify-center items-center text-white'>
+            <div className='w-96 p-10 bg-[#00897B] rounded'>
                 <h2 className='text-2xl font-bold text-center mb-4'>Please Signup Here!</h2>
                 <form onSubmit={handleSubmit(handleSignup)}>
-                <div className="form-control w-full max-w-xs">
+                <div className="form-control w-full max-w-xs text-white">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold">Name</span>
+                            <span className="label-text text-xl font-semibold text-white ">Name</span>
                             
                         </label>
                         <input type="text" {...register("name",{
@@ -87,9 +87,9 @@ const Signup = () => {
                         {errors.name && <p role='alert' className='text-red-600'>{errors?.name?.message}</p>}
                     </div>
                     
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full max-w-xs text-white">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold">Email</span>
+                            <span className="label-text text-xl font-semibold text-white">Email</span>
                             
                         </label>
                         <input {...register("email",{
@@ -99,9 +99,9 @@ const Signup = () => {
                         
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full max-w-xs text-white">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold">Seller/Buyer</span>
+                            <span className="label-text text-xl font-semibold text-white">Seller/Buyer</span>
                             
                         </label>
                         <select {...register("role",{
@@ -115,9 +115,9 @@ const Signup = () => {
                         
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full max-w-xs text-white">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold">Password</span>
+                            <span className="label-text text-xl font-semibold text-white">Password</span>
                             
                         </label>
                         <input type="password" 
@@ -130,9 +130,9 @@ const Signup = () => {
                         {errors.password && <p role='alert' className='text-red-600'>{errors.password?.message}</p>}
                         
                     </div>
-                    <div className="form-control w-full max-w-xs text-black">
+                    <div className="form-control w-full max-w-xs text-white ">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold text-black">Photo URL</span>
+                            <span className="label-text text-xl font-semibold text-white ">Photo URL</span>
                             
                         </label>
                         <input type="text" 
