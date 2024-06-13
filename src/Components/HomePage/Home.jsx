@@ -1,9 +1,10 @@
+import Books from "../Pages/Books/Books";
 
 
 const Home = () => {
     return (
         <div>
-           <h2>Home Page</h2> 
+           <Books/>
         </div>
     );
 };
