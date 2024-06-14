@@ -12,6 +12,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import UpdateProducts from "../Pages/Dashboard/UpdateProducts";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -53,25 +54,25 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <AdminLayout/>,
+    element: <PrivateRoute><AdminLayout/></PrivateRoute>,
     children: [
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <PrivateRoute><Dashboard /></PrivateRoute>,
       },
       {
         path:'/dashboard/books',
-        element:<AllProducts/>
+        element:<PrivateRoute><AllProducts/></PrivateRoute>
       },
       {
         path:'/dashboard/update/:id',
-        element:<UpdateProducts/>,
+        element:<PrivateRoute><UpdateProducts/></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/books/${params.id}`)
       },
       
       {
         path: "/dashboard/add-products",
-        element: <AddProducts/>
+        element: <PrivateRoute><AddProducts/></PrivateRoute>
       }
     ],
   },

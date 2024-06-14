@@ -41,7 +41,7 @@ const Product = ({product, setProducts,products} ) => {
     };
     return (
         <div>
-            <div className=" h-[220px] lg:h-[350px] w-48 lg:w-72 mt-2 lg:mt-0">
+            <div className="h-[220px] lg:h-[350px] w-48 lg:w-72 mt-2 lg:mt-0">
               <div>
               <img
                   src={image_url}
@@ -52,7 +52,7 @@ const Product = ({product, setProducts,products} ) => {
               <div className="text-center">
                 <h2 className="text-base md:text-xl text-[#00897B] font-semibold my-2">{title}</h2>
                 
-                <div className="card-actions justify-center mt-2">
+                <div className="flex justify-center gap-2 mt-2">
                   <Link to={`/books/${_id}`}>
                   <button className="btn hover:bg-warning bg-[#00897B] text-white">
                    Details 
