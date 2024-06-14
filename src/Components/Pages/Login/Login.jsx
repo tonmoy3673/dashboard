@@ -104,14 +104,14 @@ const Login = () => {
                 </img>
             </div>
 
-            <div className='w-96 p-10 bg-[#00897B] rounded text-white mx-auto md:mx-0'>
-                <h2 className='text-2xl font-bold text-center mb-5'>Please Login Here!</h2>
+            <div className='w-96 p-10 bg-[#00897B] rounded text-black mx-auto md:mx-0'>
+                <h2 className='text-2xl font-bold text-center mb-5 text-white'>Please Login Here!</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
 
                     
                     <div className="form-control w-full max-w-xs text-black">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold text-white">Email</span>
+                            <span className="label-text text-xl font-semibold text-black">Email</span>
                             
                         </label>
                         <input type="email" {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
@@ -120,7 +120,7 @@ const Login = () => {
 
                     <div className="form-control w-full max-w-xs text-black ">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold text-white ">Password</span>
+                            <span className="label-text text-xl font-semibold text-black ">Password</span>
                             
                         </label>
                         <input type="password" {...register("password",{required:"Password is required",
@@ -130,20 +130,20 @@ const Login = () => {
                         {errors.password && <p role="alert" className='text-red-400'>{errors.password?.message}</p>}
                         <label className="label">
                         
-                            <a onClick={handleResetPassword} className="label-text text-white text-sm md:text-lg underline cursor-pointer">Forget Password?</a>
+                            <a onClick={handleResetPassword} className="label-text text-black text-sm md:text-lg underline cursor-pointer">Forget Password?</a>
                             
                         </label>
                     </div>
                     
                    
-                    <input type="submit" className='btn w-full font-semibold hover:bg-warning bg-[#00897B] text-white' value='Login with Email' />
+                    <input type="submit" className='btn w-full font-semibold hover:bg-warning bg-[#00897B] text-black' value='Login with Email' />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
                 <p className='py-2'>New to BookShop? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
                 <div className="divider text-xl font-semibold">OR</div>
-                <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
+                <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-black'><FaGoogle className='text-base'/> Login With Google</button>
                 
                 
             </div>
