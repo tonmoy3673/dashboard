@@ -1,8 +1,8 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HomeIcon from "@mui/icons-material/Home";
 import LogoutIcon from "@mui/icons-material/Logout";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ display, minimize }) => {
@@ -60,7 +60,7 @@ const Sidebar = ({ display, minimize }) => {
             </li>
           </Link>
 
-          <Link to="/dashboard/book/add">
+          <Link to="/dashboard/add-products">
             <li className="flex items-center group  w-full rounded cursor-pointer transition-all duration-[400ms] relative overflow-hidden py-2 px-4 bg-white hover:bg-white">
               <MenuBookIcon />
               <div

@@ -2,13 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../HomePage/Home";
 
+import AdminLayout from "../Layout/AdminLayout";
 import MainLayout from "../Layout/MainLayout";
 import BookDetails from "../Pages/Books/BookDetails";
 import Books from "../Pages/Books/Books";
+import AddProducts from "../Pages/Dashboard/AddProducts";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import AdminLayout from "../Layout/AdminLayout";
-import Dashboard from "../Pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -56,13 +57,10 @@ export const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
       },
+      
       {
-        path: "/dashboard/books",
-        element: 
-      },
-      {
-        path: "/dashboard/book/add",
-        element: 
+        path: "/dashboard/add-products",
+        element: <AddProducts/>
       }
     ],
   },
