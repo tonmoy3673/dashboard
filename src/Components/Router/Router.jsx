@@ -23,23 +23,23 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () => fetch("https://dashboard-server-ten.vercel.app/books"),
       },
       {
         path: "/home",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () => fetch("https://dashboard-server-ten.vercel.app/books"),
       },
       {
         path: "/books",
         element: <Books />,
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () => fetch("https://dashboard-server-ten.vercel.app/books"),
       },
       {
         path: "/books/:id",
         element: <BookDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://dashboard-server-ten.vercel.app/books/${params.id}`),
       },
 
       {
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
       {
         path:'/dashboard/update/:id',
         element:<PrivateRoute><UpdateProducts/></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/books/${params.id}`)
+        loader:({params})=>fetch(`https://dashboard-server-ten.vercel.app/books/${params.id}`)
       },
       
       {

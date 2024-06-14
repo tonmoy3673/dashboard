@@ -4,7 +4,7 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, sendPasswordResetEmail
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { FaGithub, FaGoogle } from 'react-icons/fa6';
+import { FaGoogle } from 'react-icons/fa6';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import app from '../../../../firebase.config';
 import { AuthContext } from '../../AuthContext/AuthProvider';
@@ -144,7 +144,7 @@ const Login = () => {
                 <p className='py-2'>New to BookShop? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
                 <div className="divider text-xl font-semibold">OR</div>
                 <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
-                <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>
+                
                 
             </div>
 

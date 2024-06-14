@@ -25,7 +25,7 @@ const breakpoints = {
 const Books = () => {
     const data=useLoaderData();
   return (
-    <div className="pt-6 md:pt-10">
+    <div className="pt-6">
         <h2 className="text-lg lg:text-3xl 2xl:text-[36px] font-semibold text-[#00897B] text-center  mt-8 md:mt-16">Our Library </h2>
       <Swiper
         // spaceBetween={5}

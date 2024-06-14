@@ -19,7 +19,7 @@ const Product = ({product, setProducts,products} ) => {
         },
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/books/${_id}`, {
+          fetch(`https://dashboard-server-ten.vercel.app/books/${_id}`, {
             method: "DELETE",
            
           })

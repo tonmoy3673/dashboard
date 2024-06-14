@@ -41,7 +41,7 @@ const UpdateProducts = () => {
     denyButtonText: `Don't save`
   }).then((result)=>{
     if (result.isConfirmed) {
-        fetch(`http://localhost:5000/books/${book._id}`, {
+        fetch(`https://dashboard-server-ten.vercel.app/books/${book._id}`, {
           method: "PATCH",
           headers:{
             "Content-type":"application/json",
@@ -69,7 +69,7 @@ const UpdateProducts = () => {
   };
     return (
         <div>
-            <h2 className="text-center pb-4 md:pb-8 text-xl lg:text-3xl text-[#880769] font-semibold">Edit Book Info</h2>
+            <h2 className="text-center pb-4 md:pb-8 text-xl lg:text-3xl text-[#f2f2f2] font-semibold">Edit Book Info</h2>
             <div className=" lg:col-span-6 md:col-span-4 md:order-1  lg:py-30 md:flex items-center 5xl:ml-[285px] 4xl:ml-[200px] 3xl:ml-[150px] 2xl:ml-[100px] xl:ml-[80px] lg:ml-[40px] md:ml-[20px]">
 
                 {/* =========== Form Part ======= */}
