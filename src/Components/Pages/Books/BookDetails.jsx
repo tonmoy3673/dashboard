@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const BookDetails = () => {
   const book = useLoaderData();
 
-  const { title, subject, author, description, image_url,pages,price,language,quantity} = book;
+  const { title, subject, author, description, image_url,pages,price,language,quantity,_id} = book;
 
 
   
@@ -59,7 +59,8 @@ const BookDetails = () => {
 
         </div>
         <div className="pt-4">
-        <button className="bg-[#00897B] px-6 py-1 text-white rounded-md hover:bg-yellow-600">Buy</button>
+       <Link to="/dashboard/orders">
+       <button className="bg-[#00897B] px-6 py-1 text-white rounded-md hover:bg-yellow-600">Buy</button></Link>
       </div>
       </div>
       

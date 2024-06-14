@@ -9,6 +9,7 @@ import Books from "../Pages/Books/Books";
 import AddProducts from "../Pages/Dashboard/AddProducts";
 import AllProducts from "../Pages/Dashboard/AllProducts";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Orders from "../Pages/Dashboard/Orders";
 import UpdateProducts from "../Pages/Dashboard/UpdateProducts";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
@@ -69,6 +70,13 @@ export const router = createBrowserRouter([
         element:<PrivateRoute><UpdateProducts/></PrivateRoute>,
         loader:({params})=>fetch(`https://dashboard-server-ten.vercel.app/books/${params.id}`)
       },
+      {
+        path:'/dashboard/orders',
+        element:<PrivateRoute><Orders/></PrivateRoute>,
+        
+
+      },
+
       
       {
         path: "/dashboard/add-products",
