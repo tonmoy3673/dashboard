@@ -14,8 +14,9 @@ const AddProducts = () => {
   const subject=form.subject.value;
   const description=form.description.value;
   const language=form.language.value;
+  const quantity=form.quantity.value;
   const image_url=form.photo.value;
- const data={title,subject,description,image_url,price,author,pages,language};
+ const data={title,subject,description,image_url,price,author,pages,language,quantity};
  console.log(data);
  Swal.fire({
   title: "Are you sure to add this item?",
@@ -148,19 +149,19 @@ const AddProducts = () => {
                   </div>
                 </div>
                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:mb-8 mb-4">
+                
                 <div>
-                <label className="sr-only" htmlFor="Description">
-                  Description
-                  </label>
-                  <h5 className="mb-2 text-[#00897B] text-base">Description *</h5>
-                  <textarea
-                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-4 lg:pr-16 pr-3  text-sm"
-                    placeholder="Write Description..."
-                    rows="6"
-                    type="text"
-                    id="description"
-                  required></textarea>
-                </div>
+                    <h5 className="mb-2 text-[#00897B] text-base">Quantity *</h5>
+                    <label className="sr-only" htmlFor="quantity">
+                    Quantity
+                    </label>
+                    <input
+                      className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                      placeholder="Enter quantity"
+                      type="text"
+                      id="quantity"
+                    required/>
+                  </div>
                
                 <div>
                     <h5 className="mb-2 text-[#00897B] text-base">Language *</h5>
@@ -176,6 +177,19 @@ const AddProducts = () => {
                   </div>
                </div>
 
+               <div>
+                <label className="sr-only" htmlFor="Description">
+                  Description
+                  </label>
+                  <h5 className="mb-2 text-[#00897B] text-base">Description *</h5>
+                  <textarea
+                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-4 lg:pr-16 pr-3  text-sm"
+                    placeholder="Write Description..."
+                    rows="6"
+                    type="text"
+                    id="description"
+                  required></textarea>
+                </div>
                 <div className=" flex md:block xs:justify-center xs:items-center xs:mx-auto">
                   <button
                   value='submit'

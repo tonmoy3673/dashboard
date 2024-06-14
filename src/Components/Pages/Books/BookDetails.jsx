@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 const BookDetails = () => {
   const book = useLoaderData();
 
-  const { title, subject, author, description, image_url,pages,price,language} = book;
+  const { title, subject, author, description, image_url,pages,price,language,quantity} = book;
 
 
   
@@ -25,6 +25,7 @@ const BookDetails = () => {
           Price : {price}$
         </p>
         <p className="font-semibold text-base md:text-lg">Subject : {subject}</p>
+        <p className="font-semibold text-base md:text-lg">Quantity : {quantity}</p>
         <p className="font-semibold text-base md:text-lg">Pages : {pages}</p>
         <p className="font-semibold text-base md:text-lg">Language : {language}</p>
         <p><span className="text-base md:text-lg font-semibold">Description</span> : {description}</p>
@@ -55,7 +56,6 @@ const BookDetails = () => {
             name="rating-4"
             className="mask mask-star-2 bg-orange-400"
           />
-
 
         </div>
         <div className="pt-4">
