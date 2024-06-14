@@ -55,9 +55,14 @@ const BookDetails = () => {
             name="rating-4"
             className="mask mask-star-2 bg-orange-400"
           />
+
+
         </div>
-       
+        <div className="pt-4">
+        <button className="bg-[#00897B] px-6 py-1 text-white rounded-md hover:bg-yellow-600">Buy</button>
       </div>
+      </div>
+      
     </div>
   );
 };
